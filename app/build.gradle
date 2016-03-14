@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.easyapi.apm'
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.easyapi.apm.demo"
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile files('libs/gson-2.2.4.jar')
+    compile files('libs/okhttp-2.5.0.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/retrofit-1.9.0.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/apm_agent.jar')
+    compile fileTree(dir: '/Users/daikting/Documents/EasyApi/android/easyapi-class-rewriter', include: 'class_rewriter.jar')
+
+
+}
